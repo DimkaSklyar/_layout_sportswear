@@ -1,10 +1,275 @@
 @import "vars"
 @import "fonts"
 @import "libs"
+@import "main.scss"
 
 /*==========  user style  ==========*/
-.test
-	color: #000
+body
+	overflow-x: hidden
+	background-color: #000
+	font-family: "roboto-example", sans-serif
+a
+	&:link
+		color: #000
+		outline: none 0
+	&:visited
+		color: #000
+		outline: none 0
+	&:hover
+		color: #000
+		text-decoration: none
+	&:active
+		color: #000
+		outline: none 0
+.smart-basket_active,
+.smart-basket__alert-wrapper
+	z-index: 9999
+header
+	position: absolute
+	z-index: 999
+	left: 0
+	right: 0
+.header-inner
+	background: rgba(255,255,255,.15)
+	padding: 20px 0
+	position: relative
+	.top-logo
+		position: absolute
+		left: 100px
+	.top-number-phone
+		position: absolute
+		right: 110px
+		top: 50%
+		transform: translateY(-50%)
+		text-transform: uppercase
+		font-size: 1.1em
+		font-weight: bold
+		letter-spacing: 1px
+		color: #ffffff
+		transition: .3s
+		&:hover
+			color: #c8ff0b
+	.header__basket-min
+		position: absolute
+		right: -60px
+		top: 50%
+		transform: translateY(-50%)
+		img
+			width: 25px
+		.smart-basket__min-count
+			font-weight: bold
+			margin-left: 10px
+			font-size: 25px
+			color: #ffffff
+			line-height: 1
+	.smart-basket__min
+		background: none
+		border: none
+		outline: none 0
+		cursor: pointer
+		font-size: 1.1em
+		display: flex
+	.navigation-top
+		background-color: #000
+		a
+			color: #ffffff
+		ul
+			display: flex
+			justify-content: space-between
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				position: relative
+				&:not(:first-child):before
+					position: absolute
+					content: ''
+					top: 50%
+					left: 0
+					width: 1px
+					height: 30%
+					background-color: rgba(255,255,255,.15)
+					transform: translateY(-50%)
+				&:hover a
+					color: #c8ff0b
+			a
+				text-transform: uppercase
+				display: block
+				margin: 0 15px
+				padding: 15px
+				font-weight: bold
+				transition: .3s
+
+main
+	background-color: #fff
+.section-inner
+	width: 1250px
+	margin: 0 auto
+	background-color: #fff
+	box-shadow: 0 1px 15px 6px rgba(0,0,0,.05), 0 0 0 rgba(0,0,0,.10) inset
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: -70px
+		left: 0
+		right: 0
+		height: 70px
+		background-color: #fff
+.category-wrapper
+	padding-bottom: 70px
+	.category-item
+		height: 270px
+		min-height: 270px
+		text-align: center
+		&__img
+			outline-offset: -15px
+			outline: 1px solid #cccccc
+			overflow: hidden
+			display: flex
+			justify-content: center
+			img
+				height: 100%
+
+.section-product
+	padding: 40px 0
+.header-section
+	text-align: center
+	padding-bottom: 40px
+	p
+		font-style: italic
+		padding: 0
+		margin-bottom: 10px
+	h2
+		position: relative
+		text-transform: uppercase
+		display: inline-block
+		background-color: #fff
+		padding: 0 100px
+		line-height: 1
+		&:hover
+			color: #c8ff0b
+		&:before
+			position: absolute
+			content: ''
+			width: 50px
+			height: 2px
+			background-color: #000000
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+		&:after
+			position: absolute
+			content: ''
+			width: 40px
+			height: 2px
+			background-color: #000000
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+.product
+	&-img
+		height: 270px
+		position: relative
+		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			top: -100%
+			left: 0
+			right: 0
+			height: inherit
+			background: rgba(200, 255, 11, 0.40)
+			transition: .3s
+		&:after
+			content: '\f002'
+			font-family: "FontAwesome"
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%,-50%)
+			font-size: 4em
+			color: #000000
+			opacity: 0
+			transition-delay: 6s
+			transition: .3s
+		&:hover:before
+			top: 0
+		&:hover:after
+			opacity: 1
+		img
+			width: 100%
+	&-text
+		text-align: center
+		padding: 20px	0
+		h3
+			font-size: 16px
+			line-height: 1
+			font-weight: 200
+			letter-spacing: 2px
+			transition: .3s
+			&:hover
+				color: #c8ff0b
+		.price
+			font-weight: bold
+			font-size: 1.1em
+
+
+
+
+
+
+
+
+
+#small-dialog
+	.small-dialog__img
+		overflow: hidden
+		img
+			width: 100%
+	h2
+		text-transform: uppercase
+		font-weight: 200
+	.price
+		font-weight: bold
+		font-size: 1.1em
+		color: #c8ff0b
+		&+.fa
+			color: #c8ff0b
+	.small-dialog-text__wrapper
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		min-height: 100%
+	.product__add-to-cart-button
+		align-self: flex-start
+		background-color: #000000
+		color: #ffffff
+		border: none
+		outline: none 0
+		padding: 10px 20px
+		border-radius: 5px
+		cursor: pointer
+		transition: .3s
+		text-transform: uppercase
+		i
+			font-size: 1.1em
+			margin-right: 5px
+		&:hover
+			background-color: #c8ff0b
+			color: #000000
+	.smart-basket__product-quantity-state
+		width: 60px
+	.smart-basket__quantity-item
+		justify-content: flex-start
+	.product__quantity
+		padding: 20px 0
+.smart-basket__send-form
+	text-transform: uppercase
+	font-weight: bold
+.smart-basket__close-form
+	text-transform: uppercase
+	font-weight: bold
 /*==========  user style  ==========*/
 
 @import "media" // Always at the end
