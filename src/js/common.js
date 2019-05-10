@@ -12,7 +12,21 @@ $(function () {
   });
 });
 
+$(window).scroll(function() {
+  if($(this).scrollTop() >= 1) {
+      $('header').addClass('stiky-nav');
+  }
+  else{
+      $('header').removeClass('stiky-nav');
+  }
+});
+
 $(document).ready(function () {
+
+$(".btn__promo").click(function () { 
+  $(".promo-item").trigger('click');
+});
+
   $('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
 
@@ -83,12 +97,11 @@ $(document).ready(function () {
   }
   
   var deadline="August 01 2019 00:00:00 GMT+0300"; 
-  // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
   initializeClock('clockdiv', deadline);
 
   $('.slick_1').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -122,8 +135,7 @@ $(document).ready(function () {
     ]
   });
   $('.slick_2').slick({
-    dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -161,10 +173,18 @@ $(document).ready(function () {
   // card
 
   var jssor_1_SlideoTransitions = [
-    [{b:-1,d:1,o:-1,r:-180},{b:0,d:1220,x:-347,y:-246,sX:0.5,sY:0.5},{b:1220,d:660,x:553,y:240,o:1,r:180,sX:-0.5,sY:-0.5}],
-    [{b:-1,d:1,o:-0.9,sX:2.5,sY:2.5,e:{o:5}},{b:0,d:1200,x:-175,y:189,o:0.9,sX:-2.5,sY:-2.5,e:{sX:1,sY:1}}],
-    [{b:0,d:1220,x:665,y:397}],
-    [{b:-1,d:1,r:90,e:{r:16}},{b:0,d:540,x:-53,y:-68,r:-90}]
+    [{b:-1,d:1,o:-1,r:-180},{b:0,d:1220,x:-347,y:-246,sX:0.5,sY:0.5},{b:1220,d:660,x:589,y:246,o:1,r:180,sX:-0.5,sY:-0.5}],
+    [{b:-1,d:1,o:-0.9,sX:2.5,sY:2.5,e:{o:5}},{b:0,d:1200,x:-24,y:119,o:0.9,sX:-2.5,sY:-2.5,e:{sX:1,sY:1}}],
+    [{b:-1,d:1,o:-1,sX:-0.5,sY:-0.5},{b:0,d:1880,y:5,o:1,sX:0.5,sY:0.5,e:{sX:6,sY:6}}],
+    [{b:-1,d:1,r:90,e:{r:16}},{b:540,d:680,x:-18,y:-49,r:-90}],
+    [{b:-1,d:1,o:-1,sX:-0.5,sY:-0.5},{b:0,d:1000,o:1,sX:0.5,sY:0.5}],
+    [{b:-1,d:1,o:-1,sX:-0.8,sY:-0.8},{b:0,d:1160,o:1,sX:0.8,sY:0.8}],
+    [{b:-1,d:1,o:-1,sX:-1,sY:-1},{b:0,d:1660,o:1,sX:1,sY:1}],
+    [{b:-1,d:1,o:-1,sX:-1,sY:-1,e:{sX:12,sY:19}},{b:0,d:800,o:1,sX:1,sY:1,e:{sX:5,sY:20}}],
+    [{b:-1,d:1,o:-1,sX:1,sY:1},{b:0,d:1000,o:1,sX:-1,sY:-1}],
+    [{b:-1,d:1,o:-1,sX:1,sY:1},{b:0,d:1160,o:1,sX:-1,sY:-1}],
+    [{b:-1,d:1,o:-1,sX:1.5,sY:1.5},{b:0,d:1660,o:1,sX:-1.5,sY:-1.5}],
+    [{b:-1,d:1,o:-1,sX:-1,sY:-1,e:{sX:12,sY:19}},{b:0,d:800,o:1,sX:1,sY:1,e:{sX:5,sY:20}}]
   ];
 
   var jssor_1_options = {
@@ -207,3 +227,4 @@ $(document).ready(function () {
   $(window).bind("orientationchange", ScaleSlider);
   /*#endregion responsive code end*/
 });
+  /*#endregion responsive code end*/
