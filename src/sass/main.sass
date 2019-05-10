@@ -21,6 +21,11 @@ a
 	&:active
 		color: #000
 		outline: none 0
+.m-hirozont-center
+	margin: 0 auto
+	@media screen and (max-width: 1440px)
+		flex: 0 0 83.33333%
+		max-width: 83.33333%
 .btn
 	max-width: 150px
 	height: 45px
@@ -42,27 +47,20 @@ header
 	background: rgba(255,255,255,.15)
 	padding: 20px 0
 	position: relative
+	.container
+		position: relative
 	.top-logo
 		position: absolute
-		left: 100px
-	.top-number-phone
-		position: absolute
-		right: 110px
-		top: 50%
-		transform: translateY(-50%)
-		text-transform: uppercase
-		font-size: 1.1em
-		font-weight: bold
-		letter-spacing: 1px
-		color: #ffffff
-		transition: .3s
-		&:hover
-			color: #c8ff0b
+		left: -140px
+		@media screen and (max-width: 1440px)
+			left: -85px
 	.header__basket-min
 		position: absolute
-		right: -60px
+		right: -75px
 		top: 50%
 		transform: translateY(-50%)
+		@media screen and (max-width: 1440px)
+			right: -20px
 		img
 			width: 25px
 		.smart-basket__min-count
@@ -108,6 +106,8 @@ header
 				padding: 15px
 				font-weight: bold
 				transition: .3s
+				@media screen and (max-width: 1440px)
+					margin: 0 5px
 
 main
 	background-color: #fff
@@ -511,7 +511,14 @@ footer
 .smart-basket__close-form
 	text-transform: uppercase
 	font-weight: bold
-
+.header-inner .header__basket-min
+	background-color: #91d304
+	padding: 12px 20px
+	color: #000
+	cursor: pointer
+.header-inner .header__basket-min .smart-basket__min-count
+	color: #000
+	cursor: pointer
 .slick-arrow
 	&:before
 		color: #c8ff0b

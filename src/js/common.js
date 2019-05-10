@@ -7,7 +7,6 @@ $(function () {
     smartBasketCurrency: '₽',
     productQuantityWrapper: 'product__quantity',
     smartBasketMinArea: 'header__basket-min',
-
     smartBasketMinIconPath: '/img/shopping-basket-wight.svg',
   });
 });
