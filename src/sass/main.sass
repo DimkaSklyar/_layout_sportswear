@@ -8,6 +8,7 @@ body
 	overflow-x: hidden
 	background-color: #000
 	font-family: "Roboto", sans-serif
+	min-width: 400px
 a
 	&:link
 		color: #000
@@ -61,15 +62,13 @@ header
 		position: relative
 .header-inner
 	background: rgba(255,255,255,.15)
-	padding: 20px 0
+	padding: 15px 0
 	position: relative
 	+media-breakpoint-down(md)
 		padding: 40px 0
 		padding: 60px 0
 	.container
 		position: relative
-		+media-breakpoint-down(md)
-			position: initial
 	.top-logo
 		position: absolute
 		left: -140px
@@ -80,7 +79,7 @@ header
 		+media-breakpoint-down(md)
 			left: 50%
 			transform: translateX(-50%)
-			top: 10px
+			top: -50px
 		figure
 			@media screen and (max-width: 1250px)
 				height: 50px
@@ -101,8 +100,8 @@ header
 			right: 15px
 			padding: 5px 20px !important
 		+media-breakpoint-down(md)
-			top: 95px
-			right: 125px
+			top: 35px
+			right: 15px
 		img
 			width: 25px
 		.smart-basket__min-count
@@ -174,6 +173,13 @@ main
 		width: 992px
 	+media-breakpoint-down(md)
 		width: 770px
+	@media screen and (max-width: 790px)
+		width: 768px
+	+media-breakpoint-down(sm)
+		width: 576px
+		padding-top: 30px
+	+media-breakpoint-down(xs)
+		width: auto
 	&:before
 		content: ''
 		position: absolute
@@ -185,6 +191,8 @@ main
 		+media-breakpoint-down(md)
 			height: 40px
 			top: -40px
+		+media-breakpoint-down(sm)
+			content: none
 	&:after
 		content: ''
 		position: absolute
@@ -196,6 +204,8 @@ main
 		+media-breakpoint-down(md)
 			height: 40px
 			bottom: -40px
+		+media-breakpoint-down(sm)
+		content: none
 .category-wrapper
 	padding-bottom: 70px
 	+media-breakpoint-down(md)
@@ -206,6 +216,8 @@ main
 		text-align: center
 		position: relative
 		overflow: hidden
+		+media-breakpoint-down(xs)
+			height: auto
 		&:before
 			position: absolute
 			content: ''
@@ -226,6 +238,11 @@ main
 			justify-content: center
 			img
 				height: 100%
+				+media-breakpoint-down(xs)
+					width: 100%
+			.long-img
+				+media-breakpoint-down(xs)
+					width: auto
 		&__text
 			position: absolute
 			top: 50%
@@ -321,7 +338,8 @@ main
 			opacity: 1
 		img
 			height: 100%
-			width: auto
+			width: 100%
+			object-fit: contain
 		img.horizont
 			width: 100%
 			height: auto
@@ -348,11 +366,15 @@ main
 	background: #000 url('../img/bg_special.png') no-repeat
 	background-size: cover
 	padding: 120px 0
+	+media-breakpoint-down(xs)
+		padding: 40px 0
 	h2
 		font-size: 80px
 		font-weight: bold
 		text-transform: uppercase
 		animation: color-change 1s infinite
+		+media-breakpoint-down(xs)
+			font-size: 55px
 	p
 		color: #ffffff
 	#clockdiv
@@ -369,12 +391,17 @@ main
 		display: flex
 		flex-direction: column
 		justify-content: center
+		+media-breakpoint-down(xs)
+			width: 80px
+			height: 80px
 		&:not(:first-child)
 			margin-left: 20px
 		span
 			font-size: 40px
 			font-weight: bold
 			line-height: 1
+			+media-breakpoint-down(xs)
+				font-size: 25px
 		div
 			font-size: 14px
 	.btn__promo
@@ -404,14 +431,20 @@ main
 			box-shadow: 0 1px 15px 6px rgba(0,0,0,.04), 0 0 0 rgba(0,0,0,.10) inset
 			+media-breakpoint-down(md)
 				padding: 15px 65px
+			+media-breakpoint-down(sm)
+				padding: 15px 30px
 			h2
 				font-size: 36px
 				font-weight: 700
 				text-transform: uppercase
 				line-height: 1
+				+media-breakpoint-down(sm)
+					font-size: 22px
 			strong
 				font-size: 24px
 				font-weight: bold
+				+media-breakpoint-down(sm)
+					font-size: 18px
 			p
 				font-size: 14px
 				font-weight: 400
@@ -425,7 +458,7 @@ main
 			background-color: #c8ff0b
 
 .comments
-	padding: 150px
+	padding: 150px 15px
 	background: url('../img/bg_comments.png') no-repeat
 	background-size: cover
 	color: #fff
@@ -461,6 +494,8 @@ main
 				position: relative
 				width: 90%
 				margin: 10px auto 0
+				+media-breakpoint-down(sm)
+					margin-bottom: 15px
 				&:before,
 				&:after
 					content: ''
@@ -479,10 +514,14 @@ main
 		background: url('../img/bcg-banner-2.png') no-repeat
 		background-size: contain
 		background-position: left
+		+media-breakpoint-down(sm)
+			background-size: cover
 	.banner-card_wrap__2
 		margin-left: auto
 		+media-breakpoint-down(md)
 			margin-right: 35px
+		+media-breakpoint-down(sm)
+			margin-right: 0
 .mb-md-3
 	+media-breakpoint-down(md)
 		margin-bottom: 30px
@@ -490,6 +529,8 @@ footer
 	background-color: #000000
 	padding: 125px 0
 	color: #ffffff
+	+media-breakpoint-down(xs)
+		padding: 40px 0
 	.bottom-logo__wrap
 		text-align: center
 		margin-bottom: 50px
@@ -516,12 +557,16 @@ footer
 		font-weight: 300
 	.social-footer
 		margin-left: -20px
+		+media-breakpoint-down(sm)
+			margin-left: 0
 	.social
 		a
 			text-transform: uppercase
 	.contacts-footer
 		margin-left: 20px
 		+media-breakpoint-down(md)
+			margin-left: 0
+		+media-breakpoint-down(sm)
 			margin-left: 0
 .copyright
 	background-color: #111
@@ -530,7 +575,9 @@ footer
 	color: #666	
 	i
 		color: red
-
+.mt-sm-2
+	+media-breakpoint-down(sm)
+		margin-top: 20px
 #small-dialog
 	.small-dialog__img
 		overflow: hidden
@@ -607,15 +654,19 @@ footer
 	position: fixed
 	.header-inner
 		background-color: #000000
-		padding: 30px 0
+		padding: 15px 0
+		+media-breakpoint-down(md)
+			padding: 30px 0
 .display-none
 	display: none
 .null-top
 	top: 0
 .null-top-40
-	top: 40px !important
-	right: 125px !important
-
+	top: 10px !important
+	right: 15px !important
+.mt-xs-2
+	+media-breakpoint-down(xs)
+		margin-top: 20px
 #nav-icon2 span
 	height: 3px
 	background: #91d304

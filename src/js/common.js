@@ -129,6 +129,7 @@ $(".btn__promo").click(function () {
   $('.slick_1').slick({
     dots: true,
     infinite: true,
+    arrows: false,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -145,8 +146,8 @@ $(".btn__promo").click(function () {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
@@ -173,21 +174,25 @@ $(".btn__promo").click(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false
         }
       }
       // You can unslick at a given breakpoint now by adding:
