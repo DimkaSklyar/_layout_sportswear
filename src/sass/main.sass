@@ -26,6 +26,14 @@ a
 	@media screen and (max-width: 1440px)
 		flex: 0 0 83.33333%
 		max-width: 83.33333%
+	@media screen and (max-width: 1250px)
+		flex: 0 0 75%
+    max-width: 75%
+	+media-breakpoint-down(md)
+		flex: 0 0 83.33333%
+		max-width: 83.33333%
+		margin-left: 12.33333%
+		margin-top: 15px
 .btn
 	max-width: 150px
 	height: 45px
@@ -38,22 +46,47 @@ a
 .smart-basket_active,
 .smart-basket__alert-wrapper
 	z-index: 9999
+.menu
+	+media-breakpoint-down(md)
+		display: none
+.mobile-menu-wrapper
+	+media-breakpoint-down(md)
+		top: 25px
 header
 	position: absolute
 	z-index: 999
 	left: 0
 	right: 0
+	+media-breakpoint-down(md)
+		position: relative
 .header-inner
 	background: rgba(255,255,255,.15)
 	padding: 20px 0
 	position: relative
+	+media-breakpoint-down(md)
+		padding: 40px 0
+		padding: 60px 0
 	.container
 		position: relative
+		+media-breakpoint-down(md)
+			position: initial
 	.top-logo
 		position: absolute
 		left: -140px
 		@media screen and (max-width: 1440px)
 			left: -85px
+		@media screen and (max-width: 1250px)
+			left: -25px
+		+media-breakpoint-down(md)
+			left: 50%
+			transform: translateX(-50%)
+			top: 10px
+		figure
+			@media screen and (max-width: 1250px)
+				height: 50px
+			img
+				@media screen and (max-width: 1250px)
+					height: 100%
 	.header__basket-min
 		position: absolute
 		right: -75px
@@ -61,6 +94,14 @@ header
 		transform: translateY(-50%)
 		@media screen and (max-width: 1440px)
 			right: -20px
+		@media screen and (max-width: 1250px)
+			right: 35px
+			padding: 7px 20px !important
+		+media-breakpoint-down(lg)
+			right: 15px
+			padding: 5px 20px !important
+		+media-breakpoint-down(md)
+			top: 95px
 		img
 			width: 25px
 		.smart-basket__min-count
@@ -78,6 +119,8 @@ header
 		display: flex
 	.navigation-top
 		background-color: #000
+		+media-breakpoint-down(md)
+			background: none
 		a
 			color: #ffffff
 		ul
@@ -108,6 +151,11 @@ header
 				transition: .3s
 				@media screen and (max-width: 1440px)
 					margin: 0 5px
+				@media screen and (max-width: 1250px)
+					padding: 10px
+				+media-breakpoint-down(lg)
+					font-size: 14px
+					padding:  10px 6px
 
 main
 	background-color: #fff
@@ -117,6 +165,12 @@ main
 	background-color: #fff
 	box-shadow: 0 1px 15px 6px rgba(0,0,0,.05), 0 0 0 rgba(0,0,0,.10) inset
 	position: relative
+	@media screen and (max-width: 1250px)
+		width: 1200px
+	+media-breakpoint-down(lg)
+		width: 1070px
+	@media screen and (max-width: 1050px)
+		width: 992px
 	&:before
 		content: ''
 		position: absolute
@@ -534,7 +588,18 @@ footer
 	position: fixed
 	.header-inner
 		background-color: #000000
-		padding: 10px 0
+		padding: 30px 0
+.display-none
+	display: none
+.null-top
+	top: 0
+.null-top-40
+	top: 40px !important
+	right: 165px !important
+
+#nav-icon2 span
+	height: 3px
+	background: #91d304
 /*==========  user style  ==========*/
 
 
