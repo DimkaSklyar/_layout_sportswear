@@ -64,6 +64,7 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function () {
+  var mixer = mixitup('.mixit');
 
   var touch = $('#touch-menu');
   var menu = $('.navigation-top');
@@ -133,32 +134,7 @@ $(".btn__promo").click(function () {
     };
   }
   
-  function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    var daysSpan = clock.querySelector('.days');
-    var hoursSpan = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
-  
-    function updateClock() {
-      var t = getTimeRemaining(endtime);
-  
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-  
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
-    }
-  
-    updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
-  }
-  
-  var deadline="August 01 2019 00:00:00 GMT+0300"; 
-  initializeClock('clockdiv', deadline);
+
 
   $('.slick_1').slick({
     dots: true,
@@ -235,7 +211,32 @@ $(".btn__promo").click(function () {
     ]
   });
 
-
+  function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    var daysSpan = clock.querySelector('.days');
+    var hoursSpan = clock.querySelector('.hours');
+    var minutesSpan = clock.querySelector('.minutes');
+    var secondsSpan = clock.querySelector('.seconds');
+  
+    function updateClock() {
+      var t = getTimeRemaining(endtime);
+  
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+  
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
+  
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
+  }
+  
+  var deadline="August 01 2019 00:00:00 GMT+0300"; 
+  initializeClock('clockdiv', deadline);
   // card
 
   var jssor_1_SlideoTransitions = [

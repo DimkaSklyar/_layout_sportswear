@@ -8089,26 +8089,118 @@ footer .contacts-footer {
   box-shadow: 0 1px 15px 6px rgba(0, 0, 0, 0.05), 0 0 0 rgba(0, 0, 0, 0.1) inset;
 }
 
-.page-delivery h2 {
+.page-delivery h2,
+.page-about h2,
+.page-category h2 {
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .page-delivery p,
-.page-delivery li {
+.page-delivery li,
+.page-about p,
+.page-about li,
+.page-category p,
+.page-category li {
   color: #666;
 }
 
-.page-delivery p {
+.page-delivery p,
+.page-about p,
+.page-category p {
   margin-bottom: 5px;
 }
 
-.page-delivery ul {
+.page-delivery ul,
+.page-about ul,
+.page-category ul {
   padding-left: 20px;
 }
 
-.page-delivery ul li {
+.page-delivery ul li,
+  .page-about ul li,
+  .page-category ul li {
   margin-bottom: 10px;
+}
+
+.page-about img {
+  float: right;
+  margin-left: 20px;
+  box-shadow: 0 1px 15px 6px rgba(0, 0, 0, 0.05), 0 0 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+@media (max-width: 991px) {
+  .page-about img {
+    display: none;
+  }
+}
+
+.page-about h2:not(:first-child) {
+  margin: 25px 0;
+}
+
+.page-about h2:first-child {
+  margin-bottom: 25px;
+}
+
+.page-about p {
+  line-height: 1.8;
+}
+
+.page-category h2 {
+  background-color: #aeff00;
+  padding: 10px 15px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.page-category h2:not(:first-child) {
+  margin-top: 30px;
+}
+
+.page-category .subcategory-button__wrap {
+  border: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.page-category .subcategory-button__wrap button {
+  background: none;
+  border: none;
+  outline: none 0;
+  text-align: left;
+  position: relative;
+  padding-left: 25px;
+  margin: 7px;
+  margin-left: 15px;
+}
+
+.page-category .subcategory-button__wrap button:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.page-category .subcategory-button__wrap button:after {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border: 2px solid #000000;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transform: translateY(-120%) rotate(-45deg);
+  left: 0;
+  top: 50%;
+}
+
+.page-category .subcategory-button__wrap .mixitup-control-active::after {
+  content: '';
 }
 
 @-webkit-keyframes color-change {

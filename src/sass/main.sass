@@ -771,7 +771,9 @@ footer
 
 
 //delivery
-.page-delivery
+.page-delivery,
+.page-about,
+.page-category
 	h2
 		font-weight: 400
 		text-transform: uppercase
@@ -784,6 +786,68 @@ footer
 		padding-left: 20px
 		li
 			margin-bottom: 10px
+
+//about
+.page-about
+	img
+		float: right
+		margin-left: 20px
+		box-shadow: 0 1px 15px 6px rgba(0,0,0,.05), 0 0 0 rgba(0,0,0,.1) inset
+		+media-breakpoint-down(md)
+			display: none
+	h2:not(:first-child)
+		margin: 25px 0
+	h2:first-child
+		margin-bottom: 25px
+	p
+		line-height: 1.8
+
+
+//category
+.page-category
+	h2
+		background-color: #aeff00
+		padding: 10px 15px
+		font-weight: 400
+		margin-bottom: 0
+		&:not(:first-child)
+			margin-top: 30px
+	.subcategory-button__wrap
+		border: 1px solid #ebebeb
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		button
+			background: none
+			border: none
+			outline: none 0
+			text-align: left
+			position: relative
+			padding-left: 25px
+			margin: 7px
+			margin-left: 15px
+			&:before
+				content: ''
+				position: absolute
+				width: 15px
+				height: 15px
+				border: 2px solid #000	
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+			&:after
+				
+				position: absolute
+				width: 20px
+				height: 10px
+				border: 2px solid #000000
+				border-top-color: transparent
+				border-right-color: transparent
+				transform: translateY(-120%) rotate(-45deg)
+				left: 0
+				top: 50%
+		.mixitup-control-active::after
+			content: ''
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}
     @content

@@ -72,6 +72,7 @@ gulp.task('js', function() {
 			'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 			'src/libs/smartbasket.min.js',
 			'src/libs/slick-1.8.1/slick/slick.min.js',
+			'src/libs/mixitup-v3/dist/mixitup.min.js',
 			'src/js/common.js', // Always at the end
 			])
 		.pipe(concat('scripts.min.js'))
