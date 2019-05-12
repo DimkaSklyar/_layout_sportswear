@@ -11,50 +11,6 @@
 	<link
 		href="//fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic"
 		rel="stylesheet" type="text/css" />
-	<style>
-		.jssorl-004-double-tail-spin img {
-			animation-name: jssorl-004-double-tail-spin;
-			animation-duration: 1.6s;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear
-		}
-
-		@keyframes jssorl-004-double-tail-spin {
-			from {
-				transform: rotate(0);
-			}
-
-			to {
-				transform: rotate(360deg);
-			}
-		}
-
-		.jssora053 {
-			display: block;
-			position: absolute;
-			cursor: pointer
-		}
-
-		.jssora053 .a {
-			fill: none;
-			stroke: #fff;
-			stroke-width: 640;
-			stroke-miterlimit: 10
-		}
-
-		.jssora053:hover {
-			opacity: .8
-		}
-
-		.jssora053.jssora053dn {
-			opacity: .5
-		}
-
-		.jssora053.jssora053ds {
-			opacity: .3;
-			pointer-events: none
-		}
-	</style>
 </head>
 
 <body>
@@ -102,9 +58,57 @@
 			<h1>Контакты</h1>
 		</div>
 	</div>
-	<main>
+	<main class="page-contacts">
 		<div class="smart-basket__wrapper"></div>
 		<div class="section-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<h2>Контактная информация</h2>
+						<ul class="contact-info">
+							<li><a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i> г. Краснодар, ул. Карасунская
+									25а</a></li>
+							<li><a href="tel:+88615556677"> <i class="fa fa-phone" aria-hidden="true"></i>+7 (861) 555-66-77</a></li>
+							<li><a href="mailto:example@example.com"><i class="fa fa-envelope-o"
+										aria-hidden="true"></i>example@example.com</a></li>
+						</ul>
+						<h2>Реквизиты</h2>
+						<ul class="recvezit">
+							<li>ООО "Спорт Вещь"</li>
+							<li>Юридический адрес: 115093, г.Москва , Партийный пер., д.1, корп.46, этаж 1, офис 33В</li>
+							<li>ИНН 7721823317</li>
+							<li>КПП 772501001</li>
+							<li>ОГРН 147746153840</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-12">
+						<div class="feedback-desc ta-c">
+							<h2>Обратная связь</h2>
+							<p>Пожалуйста, задайте интересующий вас вопрос, или оставьте отзыв.</p>
+							<div class="feedback-form">
+								<form id="feedback">
+									<div class="input-wrap">
+										<input type="text" name="name" id="name" placeholder="Имя" required>
+										<input type="text" name="email" id="email" placeholder="E-mail" required>
+									</div>
+									<input type="text" name="subject" id="subject" placeholder="Тема" required>
+									<textarea name="comment" id="" cols="10" rows="6" placeholder="Сообщение" required></textarea>
+								</form>
+								<div id="messegeResult-feedback">
+									<button id="feedback-form-submit" type="submit" form="feedback"
+										class="btn-feedback m0">Отправить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="map-wrap">
+							<script type="text/javascript" charset="utf-8" async
+								src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cb6c814c851885693bf4bfaf01b0c06d27804a4cd0f321a19a4f5796f6a6752&amp;width=100%25&amp;height=485&amp;lang=ru_RU&amp;scroll=false"></script>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer>

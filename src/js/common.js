@@ -1,3 +1,37 @@
+function AjaxFormRequest(result_id,formMain,url) { 
+  jQuery.ajax({ 
+    url: url, 
+    type: "POST", 
+    dataType: "html", 
+    data: jQuery("#"+formMain).serialize(), 
+    success: function(response) { 
+      $(':input','#'+formMain) 
+      .not(':button, :submit, :reset, :hidden') 
+      .val('') 
+      .removeAttr('checked') 
+      .removeAttr('selected');
+      setTimeout(() => {
+        $("#message").hide();
+      }, 5000);
+    }, 
+    error: function(response) { 
+      var par = document.getElementById(result_id);
+      var error = document.createElement('p');
+      error.classList.add("mt-3");
+      error.innerHTML = "Возникла ошибка при отправке формы.";
+      if (result_id != 'messegeResult-sub'){
+        par.appendChild(error);
+      }
+    } 
+  }); 
+}
+
+$('#feedback').submit(function(e){
+  e.preventDefault();
+  AjaxFormRequest('messegeResult-feedback','feedback','./feedback.php');
+});
+
+
 
 $(function () {
   $('.smart-basket__wrapper').smbasket({

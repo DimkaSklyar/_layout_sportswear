@@ -7192,13 +7192,18 @@ main {
   right: 0;
   height: 70px;
   background-color: #fff;
-  content: none;
 }
 
 @media (max-width: 991px) {
   .section-inner:after {
     height: 40px;
     bottom: -40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-inner:after {
+    content: none;
   }
 }
 
@@ -7995,6 +8000,95 @@ footer .contacts-footer {
 }
 
 /*==========  user style  ==========*/
+.page-contacts .contact-info {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.page-contacts .contact-info li {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.page-contacts .contact-info i {
+  margin-right: 10px;
+}
+
+.page-contacts .recvezit {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.page-contacts .recvezit li {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.page-contacts h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.page-contacts p {
+  color: #666;
+}
+
+@media (max-width: 991px) {
+  .feedback-desc {
+    margin-top: 20px;
+  }
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  background: #f5f5f5;
+  color: #666;
+  border: 1px solid #ebebeb;
+  padding: .5rem 1rem;
+  font-size: 14px;
+}
+
+.feedback-form .input-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feedback-form .input-wrap input {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.feedback-form .input-wrap input:last-child {
+  margin-left: 15px;
+}
+
+.feedback-form input[name="subject"] {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.feedback-form textarea {
+  width: 100%;
+}
+
+.btn-feedback {
+  margin-top: 10px;
+  background: #000;
+  color: #fff;
+  transition: all 0.15s ease-in-out 0s;
+  outline: none 0;
+  border: none;
+  padding: 10px 20px;
+}
+
+.map-wrap {
+  margin-top: 40px;
+  box-shadow: 0 1px 15px 6px rgba(0, 0, 0, 0.05), 0 0 0 rgba(0, 0, 0, 0.1) inset;
+}
+
 @-webkit-keyframes color-change {
   0% {
     color: #c8ff0b;
