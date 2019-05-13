@@ -836,7 +836,6 @@ footer
 				top: 50%
 				transform: translateY(-50%)
 			&:after
-				
 				position: absolute
 				width: 20px
 				height: 10px
@@ -848,6 +847,17 @@ footer
 				top: 50%
 		.mixitup-control-active::after
 			content: ''
+.radio-group
+	margin-left: 15px
+	.radio:first-child
+		margin-top: 15px
+	.radio
+		margin-bottom: 5px
+	label
+		font-weight: 400
+		margin-left: 5px
+	i
+		font-size: 15px
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}
     @content

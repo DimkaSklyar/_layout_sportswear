@@ -8203,6 +8203,27 @@ footer .contacts-footer {
   content: '';
 }
 
+.radio-group {
+  margin-left: 15px;
+}
+
+.radio-group .radio:first-child {
+  margin-top: 15px;
+}
+
+.radio-group .radio {
+  margin-bottom: 5px;
+}
+
+.radio-group label {
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.radio-group i {
+  font-size: 15px;
+}
+
 @-webkit-keyframes color-change {
   0% {
     color: #c8ff0b;

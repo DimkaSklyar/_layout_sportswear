@@ -66,30 +66,53 @@
           <div class="col-3">
             <h2>Сортировка</h2>
             <div class="subcategory-button__wrap">
+              <button type="button" data-sort="default">По умолчанию</button>
               <button type="button" data-sort="order:asc">По возрастанию</button>
               <button type="button" data-sort="order:descending">По убыванию</button>
             </div>
             <h2>Фильтр</h2>
             <div class="subcategory-button__wrap">
-              <button type="button" data-toggle="all">Все</button>
+              <button type="button" data-filter="all" id="all-product">Все</button>
               <button type="button" data-toggle=".futshirts">Футболки</button>
               <button type="button" data-toggle=".shorts">Шорты</button>
-              <button type="button" data-toggle=".cloak">Плащи</button>
-              <button type="button" data-toggle=".shirts">Рубашки</button>
-              <!-- <div class="mix category-a" data-order="1">1</div>
-                  <div class="mix category-b" data-order="2">2</div>
-                  <div class="mix category-b category-c" data-order="3">3</div>
-                  <div class="mix category-a category-d" data-order="4">4</div> -->
+              <button type="button" data-toggle=".cloak">Дождевики</button>
+              <button type="button" data-toggle=".shirts">Рубашки и Поло</button>
+              <button type="button" data-toggle=".sweatshirt">Фуфайки</button>
+              <button type="button" data-toggle=".windbreaker">Ветровки</button>
             </div>
             <h2>Цена</h2>
             <div class="subcategory-button__wrap">
-                <button type="button" data-sort="order:asc">По возрастанию</button>
-                <button type="button" data-sort="order:descending">По убыванию</button>
+              <div class="radio-group radios-filter">
+                <div class="radio">
+                  <input name="price" type="radio" id="all-price" checked="" data-toggle="all">
+                  <label class="radio-label" for="all-price">Все</label>
+                </div>
+                <div class="radio">
+                  <input id="price-under-1000" name="price" type="radio" data-price-min="0" data-price-max="999">
+                  <label for="price-under-1000" class="radio-label">0 <i class="fa fa-rub" aria-hidden="true"></i> - 999
+                    <i class="fa fa-rub" aria-hidden="true"></i></label>
+                </div>
+                <div class="radio">
+                  <input id="price-under-2500" name="price" type="radio" data-price-min="1000" data-price-max="2500">
+                  <label for="price-under-2500" class="radio-label">1000 <i class="fa fa-rub" aria-hidden="true"></i> -
+                    2499 <i class="fa fa-rub" aria-hidden="true"></i></label>
+                </div>
+                <div class="radio">
+                  <input id="price-under-5000" name="price" type="radio" data-price-min="2500" data-price-max="4999">
+                  <label for="price-under-5000" class="radio-label">2500 <i class="fa fa-rub" aria-hidden="true"></i> -
+                    4999 <i class="fa fa-rub" aria-hidden="true"></i></label>
+                </div>
+                <div class="radio">
+                  <input id="price-under-over999" name="price" type="radio" data-price-min="5000" data-price-max="999999">
+                  <label for="price-under-over999" class="radio-label">5000 <i class="fa fa-rub" aria-hidden="true"></i>
+                    - и выше</label>
+                </div>
               </div>
+            </div>
           </div>
           <div class="col-9">
             <div class="row">
-              <div class="col-lg-4 col-sm-6 mix shorts" data-order="499">
+              <div class="col-lg-4 col-sm-6 mix shorts" data-order="599" data-size="599">
                 <div class="product">
                   <div class="product__wrap">
                     <div class="product-item">
@@ -115,7 +138,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-6 mix shorts" data-order="499">
+              <div class="col-lg-4 col-sm-6 mix shorts" data-order="499" data-size="499">
                 <div class="product">
                   <div class="product__wrap">
                     <div class="product-item">
@@ -139,24 +162,262 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-6 mix shorts" data-order="499">
+              <div class="col-lg-4 col-sm-6 mix futshirts" data-order="899" data-size="899">
                 <div class="product">
                   <div class="product__wrap">
                     <div class="product-item">
                       <a class="popup-with-zoom-anim" href="#small-dialog">
                         <div class="product-img">
-                          <img src="img/product/product-1.jpg" alt="" class="product-img__">
+                          <img src="img/product/product-3.jpg" alt="" class="product-img__">
                         </div>
                       </a>
-                      <span class="d-none article">0001</span>
-                      <p class="d-1 d-none">Лаконичные шорты в спортивном стиле от Demix. Зауженный крой обеспечивает
-                        удобную посадку. В модели предусмотрено 2 кармана.</p>
+                      <span class="d-none article">0003</span>
+                      <p class="d-1 d-none">Комфортная футболка от Termit для твоего яркого лета. Прямой крой позволяет
+                        двигаться свободно. Хлопок обеспечивает комфорт и воздухообмен.</p>
                       <div class="product-text">
                         <a class="popup-with-zoom-anim" href="#small-dialog">
-                          <h3>Шорты мужские Demix</h3>
+                          <h3>Футболка мужская Termit</h3>
                         </a>
                         <div class="product-price__wrap">
-                          <span class="price">499.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                          <span class="price">899.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix sweatshirt" data-order="899" data-size="899">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-5.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0004</span>
+                      <p class="d-1 d-none">Теплая и комфортная фуфайка от Rukka, в состав которой входит натуральная
+                        шерсть. Модель подходит для занятий спортом и активного отдыха на природе при низких
+                        температурах.
+                      </p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Фуфайка мужская Rukka Danny</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">899.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix windbreaker" data-order="1999" data-size="1999">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim promo-item" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-4.jpg" alt="" class="product-img__ ">
+                        </div>
+                      </a>
+                      <span class="d-none article">0005</span>
+                      <p class="d-1 d-none">Мужская ветровка от Outventure предназначена для походов и активного отдыха.
+                        Водоотталкивающая обработка ткани ADD DRY Water Resistant не позволит куртке промокнуть.
+                        Мембранный материал ADD PROTECT надежно защищает даже от сильного ветра, обеспечивая при этом
+                        необходимую воздухопроницаемость. Регулируемые капюшон и низ модели позволят лучше сохранить
+                        тепло. Ветровка упаковывается в собственный карман.В модели предусмотрено 2 функциональных
+                        кармана
+                        на кнопках. </p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Ветровка мужская Outventure</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">1 999.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix cloak" data-order="1999" data-size="1999">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-8.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0008</span>
+                      <p class="d-1 d-none">Дождевик-пончо от Outventure - оптимальный выбор для походов и активного
+                        отдыха на природе. Ткань обработана водостойким покрытием с показателем влагонепроницаемости
+                        5000
+                        мм. В модели предусмотрен капюшон. Крой позволяет надевать пончо поверх рюкзака.</p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Дождевик Outventure</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">1999.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix windbreaker" data-order="1299" data-size="1299">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-9.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0009</span>
+                      <p class="d-1 d-none">PreCip Eco Jacket - универсальная ветровка, отлично подходящая для пеших
+                        походов и активного отдыха на природе. Выполненная из экологичных материалов мембранная ткань
+                        NanoPro превосходно защищает от дождя и ветра. Показатель водонепроницаемости 10 000 мм.
+                        Полностью
+                        проклеенные швы не дадут влаге попасть внутрь. Современный материал с показателем
+                        паропроницаемости 17 000 гр/м2 эффективно отводит излишки влаги и обеспечивает комфорт.
+                        Утягивающийся низ, регулируемый капюшон и манжеты на липучках помогут лучше сохранить тепло.</p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Ветровка мужская Marmot</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">1299.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix windbreaker" data-order="1399" data-size="1399">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-10.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0010</span>
+                      <p class="d-1 d-none">Мужская ветровка от Demix - отличный выбор для футбольных тренировок в
+                        прохладные дни. Капюшон незаменим в дождливые и ветреные дни. Благодаря продуманному прямому
+                        крою,
+                        ветровка не сковывает движения. Перфорация улучшает воздухообмен. В ветровке предусмотрено 2
+                        функциональных кармана.</p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Ветровка мужская Demix</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">1399.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix shirts" data-order="1499" data-size="1499">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-11.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0011</span>
+                      <p class="d-1 d-none">Поло из линейки Russian Team для поклонников спорта и болельщиков российской
+                        сборной. Модель украшена национальной символикой: изображением герба и флага. Ткань из
+                        натурального воздухопроницаемого хлопка.</p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Поло мужское Demix</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">1499.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix shirts" data-order="999" data-size="999">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-12.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0012</span>
+                      <p class="d-1 d-none">Мужская рубашка с коротким рукавом - оптимальный вариант для поездок и
+                        путешествий в теплое время года. Модель выполнена из натурального воздухопроницаемого хлопка.
+                        Классический прямой крой для удобной посадки.</p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Рубашка мужская Outventure</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">999.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix shirts" data-order="1799" data-size="1799">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-13.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0013</span>
+                      <p class="d-1 d-none">Рубашка Columbia с коротким рукавом - отличный выбор для поездок и
+                        путешествий. Модель выполнена из легкого воздухопроницаемого хлопка. Классический прямой крой
+                        для
+                        удобной посадки и естественности движений.</p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Рубашка мужская Columbia Under Exposure</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">1799.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mix shirts" data-order="1999" data-size="1999">
+                <div class="product">
+                  <div class="product__wrap">
+                    <div class="product-item">
+                      <a class="popup-with-zoom-anim" href="#small-dialog">
+                        <div class="product-img">
+                          <img src="img/product/product-14.jpg" alt="" class="product-img__">
+                        </div>
+                      </a>
+                      <span class="d-none article">0014</span>
+                      <p class="d-1 d-none">Практичная хлопковая рубашка от Merrell пригодится в путешествиях. Ткань,
+                        выполненная из натурального хлопка, приятна на ощупь. На груди расположен удобный карман.
+                        Предусмотрена возможность регулировки рукавов. </p>
+                      <div class="product-text">
+                        <a class="popup-with-zoom-anim" href="#small-dialog">
+                          <h3>Рубашка мужская Merrell</h3>
+                        </a>
+                        <div class="product-price__wrap">
+                          <span class="price">1999.00 </span><i class="fa fa-rub" aria-hidden="true"></i>
                         </div>
                       </div>
                     </div>
