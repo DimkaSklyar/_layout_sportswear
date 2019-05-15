@@ -579,13 +579,14 @@ footer
 	+media-breakpoint-down(sm)
 		margin-top: 20px
 #small-dialog
+	padding-bottom: 40px
 	.small-dialog__img
 		overflow: hidden
 		display: flex
 		justify-content: center
 		align-items: center
 		flex-grow: 1
-		height: 100%
+		height: auto
 		img
 			height: 100%
 	h2
@@ -602,6 +603,8 @@ footer
 		flex-direction: column
 		justify-content: space-around
 		min-height: 100%
+		+media-breakpoint-down(sm)
+			margin-top: 30px
 	.product__add-to-cart-button
 		align-self: flex-start
 		background-color: #000000

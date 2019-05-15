@@ -7807,13 +7807,17 @@ footer .contacts-footer {
   }
 }
 
+#small-dialog {
+  padding-bottom: 40px;
+}
+
 #small-dialog .small-dialog__img {
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  height: 100%;
+  height: auto;
 }
 
 #small-dialog .small-dialog__img img {
@@ -7840,6 +7844,12 @@ footer .contacts-footer {
   flex-direction: column;
   justify-content: space-around;
   min-height: 100%;
+}
+
+@media (max-width: 767px) {
+  #small-dialog .small-dialog-text__wrapper {
+    margin-top: 30px;
+  }
 }
 
 #small-dialog .product__add-to-cart-button {
